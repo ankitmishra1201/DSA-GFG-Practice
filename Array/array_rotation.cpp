@@ -11,7 +11,38 @@
 #include<iostream>
 using namespace std;
 
+
+void PrintTheArray(int arr[], int n)
+{
+    for (int i = 0; i < n; i++) {
+        cout << arr[i] << " ";
+    }
+}
+
+void rotate(int arr[], int d, int n){
+    int k=0;
+    int temp[n];
+    
+    for(int i=d;i<n;i++){
+        temp[k]=arr[i];
+        k++;
+    }
+
+    for(int i=0;i<d;i++){
+        temp[k]=arr[i];
+        k++;
+    }
+
+    PrintTheArray(temp,n);
+        
+}
+
 int main(){
-    void ar
+    int arr[]={1,2,3,4,5,6,7};
+    rotate(arr,2,7);
+
+
+
+    
     return 0;
 }
